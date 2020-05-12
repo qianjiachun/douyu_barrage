@@ -1,20 +1,10 @@
-# douyu_barrage
+## 毕业设计-分布式弹幕数据采集前端部分
 
-## Project setup
-```
-yarn install
-```
+### 前言
+1. 该程序是vue+typescript完成，采用的是自己设计的开发框架
+2. 页面比较简陋，旨在作为开发框架的demo
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-毕业设计前端-分布式弹幕采集系统
+### Tips
+1. 时间上限和时间下限是时间戳，因为只作为原型，所以按默认填写即可
+2. id是模糊查询
+3. [项目demo](http://douyu1.55kai.top)
