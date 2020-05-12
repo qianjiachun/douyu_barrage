@@ -1,5 +1,12 @@
 module.exports = {
   css: {
-    modules: true
+    requireModuleExtension: true
+  },
+  configureWebpack: {
+    externals: {
+      vue: "Vue",
+      'vue-router': 'VueRouter',
+      axios: "axios",
+    }
   }
 }
