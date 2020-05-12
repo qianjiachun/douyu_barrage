@@ -1,4 +1,4 @@
-import { Vue, Component, Watch, Prop, Emit } from 'vue-property-decorator';
+import { Vue, Component, Emit } from 'vue-property-decorator';
 import { Field, Button } from 'vant';
 
 
@@ -9,10 +9,10 @@ import { Field, Button } from 'vant';
     }
 })
 export default class QueryPanel extends Vue {
-    private rid: string = "";
+    private rid: string = "5189167";
     private id: string = "";
-    private minTime: string = "";
-    private maxTime: string = "";
+    private minTime: string = "0";
+    private maxTime: string = "9999999999";
     
     public render() {
         return (
