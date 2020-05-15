@@ -4,6 +4,7 @@ module.exports = {
   },
   configureWebpack: {
     externals: {
+      echarts: "echarts",
       vue: "Vue",
       'vue-router': 'VueRouter',
       axios: "axios",

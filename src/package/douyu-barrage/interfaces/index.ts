@@ -10,3 +10,8 @@ export interface Barrage {
 export interface Barrages {
     data: Barrage[],
 }
+
+export interface LineData {
+    x: string[],
+    y: number[],
+}

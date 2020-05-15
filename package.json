@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "babel-plugin-import": "^1.13.0",
     "core-js": "^3.6.4",
+    "echarts": "^4.7.0",
     "less": "^3.11.1",
     "less-loader": "^6.1.0",
     "vant": "^2.8.1",

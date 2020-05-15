@@ -1,6 +1,6 @@
 import { Vue, Component, Emit } from 'vue-property-decorator';
 import { Field, Button } from 'vant';
-
+import common from '../common';
 
 @Component({
     components: {
@@ -11,16 +11,16 @@ import { Field, Button } from 'vant';
 export default class QueryPanel extends Vue {
     private rid: string = "5189167";
     private id: string = "";
-    private minTime: string = "0";
-    private maxTime: string = "9999999999";
+    private minTime: string = "";
+    private maxTime: string = "";
     
     public render() {
         return (
             <div id='QueryPanel'>
                 <van-field v-model={ this.rid } type="digit" label="房间号" />
                 <van-field v-model={ this.id } label="昵称" />
-                <van-field v-model={ this.minTime } type="digit" label="时间下限" />
-                <van-field v-model={ this.maxTime } type="digit" label="时间上限" />
+                <van-field v-model={ this.minTime } label="时间下限" />
+                <van-field v-model={ this.maxTime } label="时间上限" />
                 <van-button type="primary" size="large" onClick={ this.emit }>确定</van-button>
             </div>
         );
@@ -31,6 +31,11 @@ export default class QueryPanel extends Vue {
     @Emit('setInfo')
     private setInfo(rid: string, id: string, maxTime:string, minTime: string, page: number){
         return;
+    }
+
+    private created() {
+        this.minTime = common.Time.getNextDate(-1) + " 00:00:00";
+        this.maxTime = common.Time.getNextDate(0) + " 00:00:00";
     }
 
 }
